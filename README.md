@@ -3,5 +3,22 @@
 + division by zero results in IllegalArgumentException thrown
 + the factory pattern is used to add different types of bar division output
 
-![image](https://user-images.githubusercontent.com/45006912/109706433-fe3c8280-7ba9-11eb-91e3-affdf8ff126d.png)
+```
+_78945|4
+ 4    |-----
+ _    |19736
+_38
+ 36
+ __
+ _29
+  28
+  __
+  _14
+   12
+   __
+   _25
+    24
+    __
+     1
+```
 
