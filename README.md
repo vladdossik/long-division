@@ -2,7 +2,7 @@
 + 1/100 = 0 with 1 in reminder
 + division by zero results in IllegalArgumentException thrown
 + the factory pattern is used to add different types of bar division output
-
++ covered by tests
 ```
 _78945|4
  4    |-----
