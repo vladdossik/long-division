@@ -10,12 +10,13 @@ public class Calculator {
         ArrayList<Pair> steps=new ArrayList<>() {};//for steps of division
         int tempDividend = Math.abs(dividend);
         int count = 0;
-        int reminder=dividend;
+        int reminder=0;
+        int tempDivisor=divisor;
+        divisor=Math.abs(divisor);
         if(divisor==0){
             throw new IllegalArgumentException("Divisor cannot be 0");
         }
-
-        if(dividend>divisor) {
+        if(tempDividend>=divisor) {
             while (tempDividend > 0) {
                 count++;
                 tempDividend /= 10;
@@ -43,7 +44,7 @@ public class Calculator {
         else{
             steps.add(new Pair(dividend,dividend));
         }
-        return new Result(dividend,divisor,dividend/divisor,reminder,steps);}
+        return new Result(dividend,tempDivisor,dividend/tempDivisor,reminder,steps);}
 
 
 }

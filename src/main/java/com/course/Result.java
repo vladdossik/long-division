@@ -28,8 +28,15 @@ public class Result {
     public int getReminder(){
         return reminder;
     }
-
     public ArrayList<Pair> getPair(){
         return steps;
+    }
+    @Override
+    public boolean equals(Object o){
+        Result result=(Result)o;
+        return dividend== result.dividend&&
+                divisor==result.divisor&&
+                quotient==result.quotient&&
+                reminder==result.reminder;
     }
 }

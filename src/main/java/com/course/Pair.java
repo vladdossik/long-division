@@ -3,7 +3,7 @@ package com.course;
 public class Pair {
     int firstNumber;
     int secondNumber;
-    Pair(int first,int second){
+    public Pair(int first, int second){
         firstNumber=first;
         secondNumber=second;
     }
