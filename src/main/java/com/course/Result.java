@@ -2,41 +2,54 @@ package com.course;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Result {
     private final int dividend;
     private final int divisor;
     private final int quotient;
     private final int reminder;
-    private final ArrayList<Pair> steps;
-    public Result(int dividend, int divisor, int quotient, int reminder, ArrayList<Pair> steps){
-        this.dividend=dividend;//делимое
-        this.divisor=divisor;//делитель
-        this.quotient=quotient;//частное
-        this.reminder=reminder;//остаток
-        this.steps=steps;
+    private List<Pair> steps = new ArrayList<>();
+
+    public Result(int dividend, int divisor, int quotient, int reminder, List<Pair> steps) {
+        this.dividend = dividend;//делимое
+        this.divisor = divisor;//делитель
+        this.quotient = quotient;//частное
+        this.reminder = reminder;//остаток
+        this.steps = steps;
     }
-    public int getDividend(){
+
+    public int getDividend() {
         return dividend;
     }
-    public int getDivisor(){
+
+    public int getDivisor() {
         return divisor;
     }
-    public int getQuotient(){
+
+    public int getQuotient() {
         return quotient;
     }
-    public int getReminder(){
+
+    public int getReminder() {
         return reminder;
     }
-    public ArrayList<Pair> getPair(){
+
+    public List<Pair> getPair() {
         return steps;
     }
+
     @Override
-    public boolean equals(Object o){
-        Result result=(Result)o;
-        return dividend== result.dividend&&
-                divisor==result.divisor&&
-                quotient==result.quotient&&
-                reminder==result.reminder;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Result)) return false;
+        Result result = (Result) o;
+        return dividend == result.dividend && divisor == result.divisor && quotient == result.quotient
+                && reminder == result.reminder && steps.containsAll(result.steps);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dividend, divisor, quotient, reminder, steps);
     }
 }

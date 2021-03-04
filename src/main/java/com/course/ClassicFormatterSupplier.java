@@ -1,8 +1,5 @@
 package com.course;
 
-import java.util.function.Supplier;
-
-
 public class ClassicFormatterSupplier implements FormatterSupplier {
 
     @Override
@@ -12,6 +9,6 @@ public class ClassicFormatterSupplier implements FormatterSupplier {
 
     @Override
     public Formatter get() {
-       return new ClassicFormatter();
+        return new ClassicFormatter();
     }
 }

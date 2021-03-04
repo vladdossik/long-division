@@ -1,22 +1,20 @@
 package com.course;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
 
 public class Calculator {
-    public Result divide(int dividend, int divisor){
-        ArrayList<Pair> steps=new ArrayList<>() {};//for steps of division
+    public Result divide(int dividend, int divisor) {
+        ArrayList<Pair> steps = new ArrayList<>() {
+        };//for steps of division
         int tempDividend = Math.abs(dividend);
         int count = 0;
-        int reminder=0;
-        int tempDivisor=divisor;
-        divisor=Math.abs(divisor);
-        if(divisor==0){
+        int reminder = 0;
+        int tempDivisor = divisor;
+        divisor = Math.abs(divisor);
+        if (divisor == 0) {
             throw new IllegalArgumentException("Divisor cannot be 0");
         }
-        if(tempDividend>=divisor) {
+        if (tempDividend >= divisor) {
             while (tempDividend > 0) {
                 count++;
                 tempDividend /= 10;
@@ -36,15 +34,13 @@ public class Calculator {
                 if (reminder < divisor) {
                     try {
                         reminder = reminder * 10 + digitsDividend[i + 1];
-                    } catch (Exception e) {
+                    } catch (Exception ignored) {
                     }
                 }
             }
+        } else {
+            steps.add(new Pair(dividend, dividend));
         }
-        else{
-            steps.add(new Pair(dividend,dividend));
-        }
-        return new Result(dividend,tempDivisor,dividend/tempDivisor,reminder,steps);}
-
-
+        return new Result(dividend, tempDivisor, dividend / tempDivisor, reminder, steps);
+    }
 }
