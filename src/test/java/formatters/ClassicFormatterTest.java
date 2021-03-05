@@ -1,6 +1,8 @@
-import com.course.ClassicFormatter;
-import com.course.Pair;
-import com.course.Result;
+package formatters;
+
+import com.course.model.ClassicFormatter;
+import com.course.model.Pair;
+import com.course.model.Result;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

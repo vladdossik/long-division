@@ -1,4 +1,4 @@
-package com.course;
+package com.course.model;
 
 import java.util.Objects;
 

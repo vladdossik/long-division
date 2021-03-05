@@ -1,5 +1,7 @@
-package com.course;
+package com.course.formatters;
 
+
+import com.course.model.ClassicFormatterSupplier;
 
 import java.util.HashMap;
 import java.util.Map;

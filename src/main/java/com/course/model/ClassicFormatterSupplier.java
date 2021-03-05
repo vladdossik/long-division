@@ -1,4 +1,7 @@
-package com.course;
+package com.course.model;
+
+import com.course.formatters.Formatter;
+import com.course.formatters.FormatterSupplier;
 
 public class ClassicFormatterSupplier implements FormatterSupplier {
 

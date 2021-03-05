@@ -1,4 +1,4 @@
-package com.course;
+package com.course.formatters;
 
 public class GermanFormatterSupplier implements FormatterSupplier {
 

@@ -1,5 +1,8 @@
 package com.course;
 
+import com.course.model.Pair;
+import com.course.model.Result;
+
 import java.util.ArrayList;
 
 public class Calculator {

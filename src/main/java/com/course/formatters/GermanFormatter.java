@@ -1,4 +1,7 @@
-package com.course;
+package com.course.formatters;
+
+import com.course.model.Pair;
+import com.course.model.Result;
 
 import java.util.List;
 
