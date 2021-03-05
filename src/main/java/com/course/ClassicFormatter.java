@@ -13,7 +13,6 @@ public class ClassicFormatter implements Formatter {
         if (!String.valueOf(result.getDividend()).contains(String.valueOf(steps.get(0).getSecond())) || String.valueOf(result.getDividend()).contains(String.valueOf('-'))) {
             firstIndent++;
         }
-
         stringBuilder.append("\n" + "_").append(result.getDividend()).append("|").append(result.getDivisor()).append("\n").append(" ").append(repeatingCharacter(' ', firstIndent)).append(steps.get(0).getSecond()).append(repeatingCharacter(' ', String.valueOf(result.getDividend()).length() - count - firstIndent)).append("|").append(repeatingCharacter('-', String.valueOf(result.getQuotient()).length())).append("\n").append(repeatingCharacter(' ', 1 + firstIndent)).append(repeatingCharacter('_', count)).append(repeatingCharacter(' ', String.valueOf(result.getDividend()).length() - count - firstIndent)).append("|").append(result.getQuotient()).append("\n");
         char[] tempDividend = String.valueOf(result.getDividend()).toCharArray();
         for (int i = 0; i < String.valueOf(result.getDividend()).length(); i++) {

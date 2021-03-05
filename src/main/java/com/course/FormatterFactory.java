@@ -11,6 +11,7 @@ public enum FormatterFactory {
     FormatterFactory() {
         suppliers = new HashMap<>();
         register(new ClassicFormatterSupplier());
+        register(new GermanFormatterSupplier());
     }
 
     public void register(FormatterSupplier supplier) {
